@@ -1,4 +1,4 @@
 AAD
 ===
 
-Source code for research on anomalous absence detection of data in warehouse intake streams. 
+Source code for research project for detection of anomalous absence of data in database intake streams. 
