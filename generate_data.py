@@ -7,6 +7,8 @@ __author__ = 'Edmon Begoli'
 import sqlite3
 import random
 import csv
+import sys
+import getopt
 from datetime import date, datetime
 from random import randint
 
@@ -18,7 +20,7 @@ def generate_claim(state,zip,hrr,provider_id):
 	pass
 	
 def setup_hsa_hrr():
-	''' Sets up Hospital Regios '''
+	''' Sets up Hospital Regions '''
 	conn = sqlite3.connect( 'source.db' )
 	curs = conn.cursor()
 	curs.execute('DROP TABLE IF EXISTS zip_hsa_hrr;')
@@ -43,6 +45,7 @@ def setup_hsa_hrr():
 	print 'done storing hrr-hsa zip crosswalk!'
 
 def setup_codes():
+	""" Creates a table with all icd-9 codes """
 	conn = sqlite3.connect( 'source.db' )
 	curs = conn.cursor()
 	curs.execute('DROP TABLE IF EXISTS icd9;')
@@ -62,6 +65,7 @@ def setup_codes():
 	print 'done storing icd9 codes!'	
 
 def setup_states():
+	""" sets up a states database """
 	conn = sqlite3.connect( 'source.db' )
 	curs = conn.cursor()
 	curs.execute('DROP TABLE IF EXISTS states;')
@@ -87,10 +91,12 @@ def setup_states():
 			first = False
 	print 'done storing state data!'
 
-def random_claim_id():
-	return randint(10000, 99999)
+def random_claim_id(begin_id=0, end_id=99999):
+	""" generates the random int representing the claim id"""
+	return randint(begin_id, end_id)
 
 def load_state_zips(state):
+	""" loads all zips for all states """
 	global state_zip
 	with sqlite3.connect( 'source.db' ) as conn:
 		cur = conn.cursor()
@@ -98,17 +104,19 @@ def load_state_zips(state):
           cur.execute("SELECT zip FROM states WHERE state=:st",{"st":str(state)}) ]
 
 
-#TODO: allow to specify start date and end date
-def random_date(my_year=datetime.now().year):
-	start_date = date(day=1, month=1, year=my_year).toordinal()
-	end_date = date(day=31, month=12, year=my_year).toordinal()
+def random_date(begin_year=datetime.now().year,end_year=datetime.now().year):
+	""" returns a random date. Default is the Jan. 1 to Dec. 31 of the current year"""
+	start_date = date(day=1, month=1, year=begin_year).toordinal()
+	end_date = date(day=31, month=12, year=end_year).toordinal()
 	random_day = date.fromordinal(random.randint(start_date, end_date))
 	return random_day
 
-def random_cost(low=500, high=15000):
+def random_cost(low=1, high=150000):
+	""" randomly returns the cost range, uniformly distributed"""
 	return random.uniform(low, high)
 
 def random_icd():
+	""" returns randomly selected ICD """
 	global icds
 	if not icds:
 		with sqlite3.connect( 'source.db' ) as conn:
@@ -118,14 +126,17 @@ def random_icd():
 	return icds[randint(0,len(icds))] 
 
 def random_zip(state):
+	""" randomly picks up the zip from the state """
 	global state_zip
 	if not state in state_zip:
 		load_state_zips(state)
 
 	return state_zip[state][randint( 0,len(state_zip[state]) )]
 
-def generate_dataset():
-	for state in states:
+def generate_dataset(max=50):
+	""" generates a sample dataset """
+	for i in range(max):
+		state = random.choice(states)
 		print (',').join( map(str,[random_claim_id(), state, random_zip(state), random_date(), random_date(), "%.2f" % random_cost(), random_icd() ])) 
 
 
@@ -136,6 +147,16 @@ def store_test_dataset( test_dataset, source='source.db' ):
 		c.execute('insert into test_dataset values (?,?,?)', item)
 	conn.commit()
 
+def main(argv):
+	""" Main function of the program"""
+	try:
+		opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+	except getopt.GetoptError:
+		print 'generate_data.py -zip -date -icd'
+		sys.exit(2)
+	for opt, arg in opts:
+		pass
+
 if __name__ == '__main__':
 	for i in range(10):
 		print states[i%5]
@@ -144,5 +165,6 @@ if __name__ == '__main__':
 		print "%.2f" % random_cost() 
 		print random_icd()
 	generate_dataset()
+	main(sys.argv[1:])
 
 
