@@ -13,8 +13,17 @@ from datetime import date, datetime
 from random import randint
 
 state_zip = {}
+state_county_zip=[]
+state_county_zip_dict={}
 icds = []
-states = ('AL','AR','GA','NC','TN','SC', 'FL','MO','VA','WV')
+#states = ('AL','AR','GA','NC','TN','SC', 'KY','FL','MO','VA','WV')
+states = ["TN"]
+zip_codes = []
+ndc_codes = []
+
+
+counties_to_exclude = ("Dyer", "Obion", "Carter")
+
 
 def generate_claim(state,zip,hrr,provider_id):
 	pass
@@ -64,8 +73,24 @@ def setup_codes():
 			first = False
 	print 'done storing icd9 codes!'	
 
+def setup_drug_codes():
+	""" Creates a table with all drug codes """
+	conn = sqlite3.connect( 'source.db' )
+	curs = conn.cursor()
+	curs.execute('DROP TABLE IF EXISTS ndc_product;')
+	create_string = """CREATE TABLE ndc_product(id INTEGER PRIMARY KEY,
+		product_id TEXT, name TEXT,	suffix TEXT,	non_proprietary_name TEXT, dea_schedule TEXT);"""
+	curs.execute(create_string)
+	reader = csv.reader(open('ndc_product.csv', 'rU'))
+	for row in reader:
+			to_db = [unicode(item, "utf8") for item in row] 
+			insert_query = """ INSERT INTO ndc_product(product_id, name, suffix, non_proprietary_name, dea_schedule) VALUES (?,?,?,?,?); """
+			curs.execute(insert_query, to_db)
+			conn.commit()
+	print 'done storing ndc codes!'		
+
 def setup_states():
-	""" sets up a states database """
+	""" Sets up a states database with all the cities, zips, etc. """
 	conn = sqlite3.connect( 'source.db' )
 	curs = conn.cursor()
 	curs.execute('DROP TABLE IF EXISTS states;')
@@ -91,8 +116,9 @@ def setup_states():
 			first = False
 	print 'done storing state data!'
 
+
 def random_claim_id(begin_id=0, end_id=99999):
-	""" generates the random int representing the claim id"""
+	""" generates the random int representing the claim id in the default range between 0 and 99999 """
 	return randint(begin_id, end_id)
 
 def load_state_zips(state):
@@ -101,15 +127,30 @@ def load_state_zips(state):
 	with sqlite3.connect( 'source.db' ) as conn:
 		cur = conn.cursor()
         state_zip[state] = [ row[0] for row in 
-          cur.execute("SELECT zip FROM states WHERE state=:st",{"st":str(state)}) ]
+          cur.execute("SELECT zip FROM states WHERE state=:st",{"st":str(state)})]
 
+def load_ndc():
+	""" loads all drug codes"""
+	global ndc_codes
+	with sqlite3.connect( 'source.db' ) as conn:
+		cur = conn.cursor()
+        ndc_codes = [ map(str,row) for row in 
+          cur.execute("SELECT product_id, name, suffix, non_proprietary_name, dea_schedule FROM ndc_product")]
 
-def random_date(begin_year=datetime.now().year,end_year=datetime.now().year):
-	""" returns a random date. Default is the Jan. 1 to Dec. 31 of the current year"""
-	start_date = date(day=1, month=1, year=begin_year).toordinal()
-	end_date = date(day=31, month=12, year=end_year).toordinal()
-	random_day = date.fromordinal(random.randint(start_date, end_date))
-	return random_day
+def load_state_county_zips(state):
+	""" loads all zips for all states """
+	global state_county_zip
+	with sqlite3.connect( 'source.db' ) as conn:
+		cur = conn.cursor()
+        state_county_zip = [ (str(row[0]),row[1]) for row in 
+             cur.execute("SELECT county, zip FROM states WHERE state=:st AND county NOT NULL AND county <> '' ORDER BY county, zip DESC",{"st":str(state)})]
+
+def random_date(begin=-30,end=0):
+	""" returns a random date. default is the interval within the past 30 days"""
+	start_date =  date.today().toordinal()+begin
+	end_date = date.today().toordinal()+end
+	random_date = date.fromordinal(random.randint(start_date, end_date))
+	return random_date
 
 def random_cost(low=1, high=150000):
 	""" randomly returns the cost range, uniformly distributed"""
@@ -123,15 +164,35 @@ def random_icd():
 			cur = conn.cursor()
 			icds = [ row[0] for row in 
 			cur.execute("SELECT code FROM icd9") ]
-	return icds[randint(0,len(icds))] 
+	return random.choice(icds) 
+
+def random_drug_code():
+	""" Returns random drug"""
+	return random.choice(ndc_codes)
+
+def random_state():
+	""" Returns random state. """
+	return random.choice(states)
 
 def random_zip(state):
 	""" randomly picks up the zip from the state """
 	global state_zip
 	if not state in state_zip:
 		load_state_zips(state)
+	return random.choice(state_zip[state])
 
-	return state_zip[state][randint( 0,len(state_zip[state]) )]
+def get_zip_county_dict():
+	""" Creates a dictionary for county zips keyed by county """
+	global state_county_zip_dict
+	key = ""
+	for item in state_county_zip:
+		print item
+		if item[0] not in key:
+			key = item[0]
+			state_county_zip_dict[key] = [item[1]]
+		else:
+			print key
+			state_county_zip_dict[key].append(item[1])
 
 def generate_dataset(max=50):
 	""" generates a sample dataset """
@@ -140,7 +201,18 @@ def generate_dataset(max=50):
 		print (',').join( map(str,[random_claim_id(), state, random_zip(state), random_date(), random_date(), "%.2f" % random_cost(), random_icd() ])) 
 
 
+def generate_day_map():
+	begin = datetime.date(2008, 8, 15)
+	end = datetime.date(2008, 9, 15)
+	next_day = begin
+	while True:
+		if next_day > end:
+			break
+		print next_day
+		next_day += datetime.timedelta(days=1)
+
 def store_test_dataset( test_dataset, source='source.db' ):
+	""" Tests the database connection. """
 	conn = sqlite3.connect(location)
 	c = conn.cursor()
 	for item in test_dataset:
@@ -150,21 +222,36 @@ def store_test_dataset( test_dataset, source='source.db' ):
 def main(argv):
 	""" Main function of the program"""
 	try:
-		opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+		opts, args = getopt.getopt(argv,"hi:o:",["ifile="," p="])
 	except getopt.GetoptError:
 		print 'generate_data.py -zip -date -icd'
-		sys.exit(2)
+		sys.exit(2) 
 	for opt, arg in opts:
 		pass
 
+def get_dataset_item():
+	"""  Generates the random dataset item for the testing purposes. """
+	state = random.choice(states)
+	#return [str(item) for item in [random_claim_id(), state, random_zip(state), random_date(begin=-60,end=-5), random_date(begin=-30), "%.2f" % random_cost(), random_icd() ]]
+	return [str(item) for item in [random_drug_code()[0], random_zip(state),random_date(begin=-160,end=-5)]]
+
+
 if __name__ == '__main__':
+	"""
 	for i in range(10):
-		print states[i%5]
-		print random_date()
-		print random_zip(states[i%5])
-		print "%.2f" % random_cost() 
-		print random_icd()
-	generate_dataset()
+		print get_dataset_item()
+	load_state_zips("TN")
+	print state_zip	
+	load_state_county_zips("TN")
+	get_zip_county_dict()
+
+	print "\n".join(map(str,state_county_zip))
+	print state_county_zip_dict
+	"""
+	load_state_county_zips(random.choice(states))
+	load_ndc()
+	for i in range(10):
+		print get_dataset_item()
 	main(sys.argv[1:])
 
 
