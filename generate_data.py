@@ -145,7 +145,7 @@ def load_state_county_zips(state):
         state_county_zip = [ (str(row[0]),row[1]) for row in 
              cur.execute("SELECT county, zip FROM states WHERE state=:st AND county NOT NULL AND county <> '' ORDER BY county, zip DESC",{"st":str(state)})]
 
-def random_date(begin=-30,end=0):
+def random_date(begin=30,end=0):
 	""" returns a random date. default is the interval within the past 30 days"""
 	start_date =  date.today().toordinal()+begin
 	end_date = date.today().toordinal()+end
@@ -229,12 +229,53 @@ def main(argv):
 	for opt, arg in opts:
 		pass
 
+
+
+""" Generates a test data set """
+
+def generate_temporally_contiguous_set(past_days=365,min_claims=40,max_claims=60):
+	i = past_days
+	claims = []
+	while i > 0:
+		claims_num = random.randint(min_claims,max_claims)
+		while claims_num > 0:
+			claims += [[str(item) for item in [random_drug_code()[0], random_zip('TN'),random_date(begin=-i,end=(-i+1))]]]
+			claims_num -=1
+		i -= 1
+	return claims
+
+def generate_spatially_uniform_dataset():
+	pass
+
+def generate_spatiotemporally_uniform_dataset():
+	pass
+
+""" Generates a test data set with anomalies """
+
+def generate_set_with_spatiotemporal_holes():
+	pass
+
+def generate_set_with_temporal_holes():
+	pass
+
+def generate_set_with_spatial_holes():
+	pass
+
 def get_dataset_item():
 	"""  Generates the random dataset item for the testing purposes. """
 	state = random.choice(states)
 	#return [str(item) for item in [random_claim_id(), state, random_zip(state), random_date(begin=-60,end=-5), random_date(begin=-30), "%.2f" % random_cost(), random_icd() ]]
 	return [str(item) for item in [random_drug_code()[0], random_zip(state),random_date(begin=-160,end=-5)]]
 
+
+""" unit tests """
+def test_random_date():
+	print random_date(begin=0,end=0)
+
+def test_generate_temporally_contiguous_set():
+	claims = generate_temporally_contiguous_set(past_days=5,min_claims=5,max_claims=10)
+	for i in claims:
+		print i
 
 if __name__ == '__main__':
 	"""
@@ -250,8 +291,16 @@ if __name__ == '__main__':
 	"""
 	load_state_county_zips(random.choice(states))
 	load_ndc()
+	"""
+	for i in range(5):
+		print test_random_date()
+	"""
+	test_generate_temporally_contiguous_set()
+	"""
 	for i in range(10):
 		print get_dataset_item()
 	main(sys.argv[1:])
+	"""
+	print "done!"
 
 
