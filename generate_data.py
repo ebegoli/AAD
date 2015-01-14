@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 ''' This file generates sample data set for research and experimentation of 
-detection of anomalous data absences
+detection of anomalous data absences. The idea behind the program is to generate the 
+continuous, sample data set that represents claims originating from US states, counties and zip codes.
+The program can simulate temporal and/or geographic absences of data. For example, there can be a week
+long absence of any data from few counties in the state.
+Typical experimental set up is to stream data at some broad, random distribution of zip codes 
+
 '''
 __author__ = 'Edmon Begoli'
 
@@ -9,6 +14,7 @@ import random
 import csv
 import sys
 import getopt
+import argparse
 from datetime import date, datetime
 from random import randint
 
@@ -22,12 +28,39 @@ zip_codes = []
 ndc_codes = []
 
 
+def load_arguments():
+    parser = argparse.ArgumentParser(description='Load parameters and arguments for data generation of anomalous data streams.')
+    parser.add_argument("--num_of_years","-y",metavar='Y', default=2, type=int, nargs='?',
+                   help='Number of simulated years.')
+    parser.add_argument("--num_of_missing_counties","-mc",metavar='Y', type=int, default=1, nargs='?',
+                   help='Size of a hole of missing counties.')
+    #TODO: fix the values below
+    parser.add_argument("--generating_states", "-s", default="TN", nargs='*',
+                   help='What are the states that generate the data.')
+    args = parser.parse_args()
+    print("Number of simulated years: {}".format(args.num_of_years))
+    print("Size of a hole in the counties: {}".format(args.num_of_missing_counties))
+    print("Generating states {}".format(args.generating_states))
+
+
+class TestDataSetup:
+	""" A class consisting of the parameters used to run the data generation """
+	past_days=365
+	min_claims=40
+	max_claims=60
+
+class AnomalyConfiguration:
+	pass
+
+class TestDataSource:
+	pass
+
 counties_to_exclude = ("Dyer", "Obion", "Carter")
 
 
 def generate_claim(state,zip,hrr,provider_id):
 	pass
-	
+
 def setup_hsa_hrr():
 	''' Sets up Hospital Regions '''
 	conn = sqlite3.connect( 'source.db' )
@@ -232,8 +265,21 @@ def main(argv):
 
 
 """ Generates a test data set """
+def generate_complete_test_set():
+	i = past_days
+	claims = []
+	while i > 0:
+		claims_num = random.randint(min_claims,max_claims)
+		while claims_num > 0:
+			claims += [[str(item) for item in [random_drug_code()[0], random_zip('TN'),random_date(begin=-i,end=(-i+1))]]]
+			claims_num -=1
+		i -= 1
+	return claims
+
 
 def generate_temporally_contiguous_set(past_days=365,min_claims=40,max_claims=60):
+	""" By default this function creates between 40 and 60 claims for 365 days where zip codes on claims are 
+	 randomly selected from all zips. """
 	i = past_days
 	claims = []
 	while i > 0:
@@ -255,8 +301,6 @@ def generate_spatiotemporally_uniform_dataset():
 def generate_set_with_spatiotemporal_holes():
 	pass
 
-def generate_set_with_temporal_holes():
-	pass
 
 def generate_set_with_spatial_holes():
 	pass
@@ -278,6 +322,7 @@ def test_generate_temporally_contiguous_set():
 		print i
 
 if __name__ == '__main__':
+        load_arguments()
 	"""
 	for i in range(10):
 		print get_dataset_item()
