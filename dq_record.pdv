@@ -1,0 +1,911 @@
+index|problem
+6|flipped height and weight
+156|wrong icd for sex
+229|wrong icd for sex
+241|flipped bp
+255|flipped height and weight
+258|mismatched height for sex
+378|flipped height and weight
+508|flipped height and weight
+574|mismatched height for sex
+707|wrong icd for sex
+1076|flipped height and weight
+1252|flipped height and weight
+1438|flipped height and weight
+1562|flipped bp
+1601|flipped height and weight
+1808|flipped bp
+1843|flipped height and weight
+2198|wrong icd for sex
+2367|flipped height and weight
+2395|flipped height and weight
+2419|mismatched height for sex
+2657|mismatched height for sex
+2669|flipped bp
+2673|flipped height and weight
+2823|flipped bp
+2855|flipped bp
+3018|flipped height and weight
+3079|flipped bp
+3094|flipped height and weight
+3172|flipped bp
+3226|flipped height and weight
+3744|flipped bp
+4069|flipped bp
+4564|flipped height and weight
+4566|flipped height and weight
+4708|flipped height and weight
+4724|flipped height and weight
+4833|flipped height and weight
+4896|flipped height and weight
+4903|flipped height and weight
+4943|flipped height and weight
+4964|mismatched height for sex
+5067|flipped height and weight
+5145|flipped height and weight
+5339|flipped height and weight
+5441|flipped height and weight
+5460|flipped bp
+5543|flipped height and weight
+5551|mismatched height for sex
+5570|flipped height and weight
+5599|flipped height and weight
+5802|flipped height and weight
+5821|flipped height and weight
+6050|flipped height and weight
+6091|flipped height and weight
+6162|flipped bp
+6247|flipped height and weight
+6506|flipped bp
+6527|flipped height and weight
+6632|flipped height and weight
+6931|flipped height and weight
+6977|flipped bp
+7223|flipped bp
+7356|flipped height and weight
+7432|flipped height and weight
+7806|flipped bp
+7843|wrong icd for sex
+7862|flipped height and weight
+7898|flipped bp
+7931|flipped height and weight
+8022|flipped bp
+8074|flipped height and weight
+8235|wrong icd for sex
+8444|mismatched height for sex
+8538|wrong icd for sex
+8592|flipped height and weight
+8694|flipped height and weight
+8767|flipped height and weight
+8790|flipped height and weight
+8863|flipped height and weight
+8920|flipped height and weight
+9100|flipped height and weight
+9127|mismatched height for sex
+9241|flipped height and weight
+9634|flipped height and weight
+9661|wrong icd for sex
+9795|flipped height and weight
+9807|flipped bp
+9809|flipped height and weight
+9869|flipped height and weight
+9904|flipped height and weight
+9910|flipped height and weight
+10165|flipped height and weight
+10251|flipped height and weight
+10313|flipped bp
+10354|flipped height and weight
+10518|wrong icd for sex
+10837|flipped height and weight
+10924|flipped bp
+11074|flipped height and weight
+11155|flipped height and weight
+11172|flipped height and weight
+11234|mismatched height for sex
+11360|flipped height and weight
+11371|mismatched height for sex
+11542|flipped height and weight
+11567|flipped bp
+11613|wrong icd for sex
+11620|flipped height and weight
+11737|flipped bp
+11802|flipped height and weight
+11969|mismatched icd code and description
+12129|flipped bp
+12138|flipped bp
+12314|flipped height and weight
+12587|flipped height and weight
+12731|wrong icd for sex
+12974|wrong icd for sex
+13201|wrong icd for sex
+13399|flipped height and weight
+13430|flipped height and weight
+13500|flipped height and weight
+13624|flipped height and weight
+13708|flipped height and weight
+13836|flipped height and weight
+13965|mismatched height for sex
+14017|flipped bp
+14026|flipped height and weight
+14071|flipped bp
+14123|flipped bp
+14249|mismatched height for sex
+14266|flipped height and weight
+14455|wrong icd for sex
+14583|flipped height and weight
+14606|flipped height and weight
+14949|flipped height and weight
+15042|flipped height and weight
+15092|flipped height and weight
+15116|flipped height and weight
+15141|flipped bp
+15226|flipped height and weight
+15377|mismatched height for sex
+15562|flipped height and weight
+15583|flipped height and weight
+15591|flipped bp
+15691|flipped height and weight
+15754|flipped height and weight
+15831|flipped height and weight
+15857|flipped height and weight
+15945|flipped bp
+15986|mismatched height for sex
+16059|flipped height and weight
+16090|wrong icd for sex
+16315|flipped height and weight
+16512|flipped height and weight
+16538|flipped height and weight
+16599|mismatched height for sex
+16665|flipped height and weight
+16793|flipped bp
+16867|flipped height and weight
+16888|flipped height and weight
+17078|flipped bp
+17097|flipped bp
+17114|flipped height and weight
+17299|flipped height and weight
+17381|flipped height and weight
+17509|mismatched height for sex
+17527|flipped height and weight
+17537|wrong icd for sex
+17644|flipped bp
+17648|flipped bp
+17668|flipped height and weight
+17712|flipped height and weight
+18052|flipped bp
+18097|flipped height and weight
+18160|mismatched height for sex
+18260|flipped height and weight
+18276|wrong icd for sex
+18655|flipped bp
+18865|flipped height and weight
+18954|flipped height and weight
+19063|flipped height and weight
+19310|wrong icd for sex
+19318|flipped height and weight
+19332|mismatched height for sex
+19358|flipped height and weight
+19392|wrong icd for sex
+19413|flipped height and weight
+19435|flipped bp
+19450|flipped height and weight
+19501|flipped height and weight
+19509|flipped bp
+19615|flipped bp
+19781|flipped height and weight
+19835|mismatched height for sex
+19924|flipped bp
+19968|wrong icd for sex
+20003|flipped height and weight
+20088|flipped height and weight
+20288|flipped height and weight
+20436|flipped bp
+20628|mismatched height for sex
+20665|wrong icd for sex
+20815|flipped height and weight
+21070|flipped height and weight
+21109|flipped height and weight
+21291|mismatched height for sex
+21301|flipped height and weight
+21315|mismatched height for sex
+21317|flipped height and weight
+21343|flipped height and weight
+21418|flipped bp
+21479|flipped height and weight
+21505|wrong icd for sex
+21549|flipped height and weight
+21756|flipped height and weight
+21937|flipped bp
+21966|flipped bp
+22235|flipped height and weight
+22244|flipped height and weight
+22305|mismatched height for sex
+22312|flipped bp
+22346|flipped height and weight
+22679|flipped bp
+22694|flipped height and weight
+22787|flipped height and weight
+23033|flipped bp
+23168|flipped height and weight
+23390|flipped height and weight
+23459|flipped height and weight
+23545|flipped bp
+23617|mismatched height for sex
+23696|flipped height and weight
+23797|mismatched height for sex
+23819|flipped height and weight
+23942|flipped bp
+23990|flipped height and weight
+24024|mismatched height for sex
+24278|flipped height and weight
+24422|flipped bp
+24453|flipped height and weight
+24539|flipped height and weight
+24676|flipped bp
+24709|flipped height and weight
+24763|mismatched height for sex
+24974|wrong icd for sex
+24991|flipped bp
+25239|flipped bp
+25247|flipped bp
+25278|flipped height and weight
+25316|wrong icd for sex
+25470|wrong icd for sex
+25530|flipped height and weight
+25531|wrong icd for sex
+25582|flipped height and weight
+26312|flipped height and weight
+26447|flipped height and weight
+26528|flipped bp
+26628|mismatched height for sex
+26725|flipped height and weight
+26868|flipped bp
+26927|flipped height and weight
+26966|flipped height and weight
+27110|flipped bp
+27201|flipped bp
+27213|flipped height and weight
+27221|flipped height and weight
+27251|flipped bp
+27391|flipped height and weight
+27392|flipped height and weight
+27426|flipped height and weight
+27459|flipped height and weight
+27654|flipped bp
+27671|flipped height and weight
+27694|flipped height and weight
+27695|flipped height and weight
+27700|wrong icd for sex
+28183|mismatched height for sex
+28244|wrong icd for sex
+28372|flipped bp
+28399|flipped bp
+28454|mismatched height for sex
+28671|flipped height and weight
+28691|flipped bp
+28813|wrong icd for sex
+28866|flipped height and weight
+29097|flipped height and weight
+29223|flipped height and weight
+29255|flipped height and weight
+29307|flipped height and weight
+29332|flipped bp
+29355|flipped height and weight
+29791|flipped bp
+29834|flipped height and weight
+30172|flipped height and weight
+30194|flipped height and weight
+30332|flipped bp
+30601|wrong icd for sex
+30618|flipped height and weight
+30636|flipped bp
+30685|flipped height and weight
+30945|flipped height and weight
+30971|flipped height and weight
+31045|mismatched height for sex
+31080|flipped height and weight
+31391|flipped height and weight
+31577|wrong icd for sex
+31789|mismatched height for sex
+31976|flipped height and weight
+32194|mismatched height for sex
+32311|wrong icd for sex
+32373|flipped bp
+32548|flipped height and weight
+32695|mismatched height for sex
+32784|flipped height and weight
+32945|flipped height and weight
+32968|flipped height and weight
+32975|flipped height and weight
+33176|flipped height and weight
+33535|flipped bp
+33603|flipped height and weight
+33701|flipped bp
+34053|flipped bp
+34353|mismatched height for sex
+34377|flipped height and weight
+34569|flipped height and weight
+34690|mismatched height for sex
+34730|flipped bp
+34831|flipped bp
+35096|flipped height and weight
+35356|mismatched height for sex
+35375|mismatched icd code and description
+35420|flipped height and weight
+35444|flipped height and weight
+35495|flipped height and weight
+35666|mismatched height for sex
+35717|flipped height and weight
+35770|flipped height and weight
+35843|flipped height and weight
+35942|flipped height and weight
+36091|mismatched height for sex
+36142|flipped height and weight
+36199|wrong icd for sex
+36264|flipped height and weight
+36353|flipped bp
+36581|mismatched height for sex
+36630|mismatched height for sex
+36636|mismatched height for sex
+36715|mismatched height for sex
+36754|flipped height and weight
+36821|wrong icd for sex
+36869|flipped height and weight
+36926|flipped height and weight
+36933|flipped height and weight
+36946|flipped height and weight
+37056|wrong icd for sex
+37088|flipped height and weight
+37130|flipped height and weight
+37373|wrong icd for sex
+37388|flipped bp
+37432|flipped height and weight
+37454|wrong icd for sex
+37456|flipped bp
+37611|wrong icd for sex
+37622|flipped height and weight
+37628|flipped height and weight
+37870|wrong icd for sex
+37891|flipped bp
+37977|flipped height and weight
+38112|flipped bp
+38142|mismatched height for sex
+38183|flipped height and weight
+38252|mismatched height for sex
+38306|flipped height and weight
+38469|mismatched height for sex
+38681|flipped height and weight
+38830|flipped height and weight
+38869|wrong icd for sex
+38949|wrong icd for sex
+39069|flipped bp
+39134|mismatched height for sex
+39185|flipped height and weight
+39424|mismatched height for sex
+39456|flipped height and weight
+39551|mismatched height for sex
+39616|flipped height and weight
+39761|flipped height and weight
+39934|flipped bp
+40225|flipped bp
+40370|flipped bp
+40501|flipped bp
+40554|flipped bp
+40616|mismatched height for sex
+40617|flipped height and weight
+40698|flipped height and weight
+40828|flipped bp
+40872|flipped height and weight
+40924|flipped height and weight
+41610|flipped height and weight
+41691|flipped bp
+41715|flipped height and weight
+41736|flipped height and weight
+41739|flipped height and weight
+41857|wrong icd for sex
+41947|flipped height and weight
+41985|mismatched height for sex
+42009|flipped height and weight
+42120|flipped height and weight
+42257|flipped height and weight
+42299|mismatched height for sex
+42380|flipped height and weight
+42542|wrong icd for sex
+42621|flipped bp
+42700|mismatched height for sex
+42815|wrong icd for sex
+43092|flipped height and weight
+43268|flipped height and weight
+43472|flipped height and weight
+43546|flipped bp
+43618|wrong icd for sex
+43773|mismatched height for sex
+43798|flipped height and weight
+43827|flipped height and weight
+44003|mismatched height for sex
+44039|flipped bp
+44098|flipped height and weight
+44133|flipped height and weight
+44143|flipped height and weight
+44201|flipped height and weight
+44383|flipped height and weight
+44724|flipped bp
+44794|mismatched height for sex
+44903|flipped height and weight
+45020|flipped bp
+45036|flipped bp
+45160|flipped bp
+45215|mismatched icd code and description
+45451|wrong icd for sex
+45509|wrong icd for sex
+45600|flipped bp
+45906|wrong icd for sex
+45949|wrong icd for sex
+45981|flipped bp
+46036|flipped bp
+46144|flipped height and weight
+46219|flipped height and weight
+46254|mismatched height for sex
+46259|mismatched height for sex
+46314|flipped height and weight
+46316|flipped bp
+46438|flipped height and weight
+46522|wrong icd for sex
+46609|flipped height and weight
+46610|flipped height and weight
+46681|flipped bp
+46819|flipped height and weight
+46870|wrong icd for sex
+46893|flipped height and weight
+46911|flipped bp
+47237|flipped height and weight
+47686|flipped height and weight
+47704|mismatched height for sex
+47746|flipped height and weight
+48114|wrong icd for sex
+48446|flipped height and weight
+48710|flipped bp
+48981|flipped height and weight
+49090|flipped height and weight
+49098|flipped height and weight
+49152|flipped height and weight
+49200|flipped bp
+49796|flipped height and weight
+49802|flipped height and weight
+49877|mismatched height for sex
+49919|mismatched icd code and description
+49921|flipped height and weight
+49959|flipped height and weight
+49987|flipped height and weight
+50154|flipped bp
+50445|flipped bp
+50506|flipped height and weight
+50984|flipped height and weight
+50993|mismatched height for sex
+51068|wrong icd for sex
+51103|flipped height and weight
+51200|mismatched height for sex
+51397|flipped bp
+51867|flipped height and weight
+51868|flipped height and weight
+52053|flipped bp
+52269|flipped height and weight
+52500|mismatched height for sex
+52564|mismatched height for sex
+52736|flipped height and weight
+52884|flipped height and weight
+52896|flipped height and weight
+53044|flipped bp
+53052|flipped height and weight
+53062|flipped bp
+53338|flipped height and weight
+53349|flipped height and weight
+53437|flipped bp
+53466|flipped height and weight
+54139|flipped bp
+54180|flipped height and weight
+54238|flipped height and weight
+54274|wrong icd for sex
+54338|wrong icd for sex
+54341|mismatched height for sex
+54421|flipped height and weight
+54624|flipped height and weight
+54953|flipped height and weight
+54980|flipped height and weight
+54994|flipped height and weight
+54999|flipped bp
+55008|flipped bp
+55278|flipped bp
+55377|mismatched height for sex
+55501|flipped height and weight
+55803|mismatched height for sex
+55960|flipped height and weight
+56054|flipped bp
+56201|flipped bp
+56213|mismatched height for sex
+56449|flipped height and weight
+56452|mismatched height for sex
+56475|flipped height and weight
+56767|flipped height and weight
+57185|flipped bp
+57287|flipped height and weight
+57299|mismatched height for sex
+57544|wrong icd for sex
+57639|flipped height and weight
+57773|flipped bp
+57907|flipped height and weight
+58219|flipped bp
+58275|mismatched height for sex
+58352|flipped height and weight
+58459|wrong icd for sex
+58519|flipped height and weight
+58757|flipped height and weight
+58760|wrong icd for sex
+58871|flipped height and weight
+59179|flipped height and weight
+59230|flipped bp
+59269|wrong icd for sex
+59297|flipped bp
+59393|flipped height and weight
+59538|wrong icd for sex
+59551|flipped height and weight
+59771|flipped height and weight
+59990|flipped height and weight
+60127|flipped height and weight
+60131|flipped bp
+60161|mismatched height for sex
+60458|mismatched height for sex
+60688|mismatched height for sex
+60692|flipped bp
+60801|flipped height and weight
+60839|wrong icd for sex
+60869|flipped bp
+61154|flipped height and weight
+61219|flipped height and weight
+61456|flipped height and weight
+61513|wrong icd for sex
+61608|flipped height and weight
+61622|flipped height and weight
+61631|flipped bp
+62194|flipped height and weight
+62356|flipped height and weight
+62451|flipped height and weight
+62567|flipped height and weight
+62574|flipped height and weight
+62625|flipped height and weight
+62687|flipped bp
+62726|flipped height and weight
+62793|flipped height and weight
+62943|mismatched height for sex
+63049|flipped height and weight
+63073|flipped height and weight
+63225|flipped height and weight
+63338|flipped bp
+63343|flipped height and weight
+63394|flipped height and weight
+63462|flipped height and weight
+63850|flipped height and weight
+64149|flipped bp
+64176|flipped bp
+64464|flipped bp
+64499|mismatched height for sex
+64505|flipped height and weight
+64590|flipped height and weight
+64673|flipped height and weight
+64675|flipped bp
+64716|flipped height and weight
+64758|flipped height and weight
+64811|flipped bp
+64900|flipped height and weight
+65020|wrong icd for sex
+65028|flipped bp
+65089|wrong icd for sex
+65200|wrong icd for sex
+65223|flipped height and weight
+65392|flipped height and weight
+65414|wrong icd for sex
+65604|flipped bp
+65697|flipped height and weight
+65853|flipped height and weight
+65988|flipped height and weight
+66303|flipped bp
+66361|flipped height and weight
+66436|flipped height and weight
+66890|flipped bp
+66909|flipped height and weight
+67006|flipped height and weight
+67188|flipped height and weight
+67224|flipped height and weight
+67251|flipped height and weight
+67258|wrong icd for sex
+67398|flipped height and weight
+67399|mismatched height for sex
+67470|mismatched height for sex
+67505|flipped height and weight
+67575|wrong icd for sex
+67618|flipped height and weight
+68122|flipped bp
+68127|flipped height and weight
+68177|flipped height and weight
+68188|flipped height and weight
+68248|flipped height and weight
+68395|mismatched height for sex
+68506|mismatched height for sex
+68570|wrong icd for sex
+68603|flipped height and weight
+68646|mismatched height for sex
+69094|mismatched icd code and description
+69186|wrong icd for sex
+69242|flipped height and weight
+69262|flipped bp
+69320|flipped height and weight
+69362|wrong icd for sex
+69376|wrong icd for sex
+69414|flipped bp
+69665|flipped height and weight
+69720|flipped height and weight
+70257|flipped height and weight
+70399|flipped bp
+70415|flipped height and weight
+70551|flipped height and weight
+70608|flipped bp
+70684|flipped bp
+70766|wrong icd for sex
+70916|mismatched icd code and description
+71103|flipped height and weight
+71128|flipped bp
+71186|flipped bp
+71406|flipped height and weight
+71474|flipped bp
+71478|flipped bp
+71501|flipped height and weight
+71826|flipped bp
+71961|flipped bp
+72030|wrong icd for sex
+72091|flipped height and weight
+72276|flipped height and weight
+72348|flipped height and weight
+72422|flipped bp
+72441|flipped bp
+72538|flipped bp
+72646|flipped height and weight
+72716|mismatched height for sex
+73132|flipped bp
+73425|flipped height and weight
+73437|flipped bp
+73578|flipped height and weight
+73634|flipped height and weight
+73704|flipped height and weight
+73740|flipped height and weight
+73855|flipped height and weight
+73899|flipped height and weight
+74012|flipped bp
+74107|flipped height and weight
+74190|flipped bp
+74238|wrong icd for sex
+74269|wrong icd for sex
+74329|wrong icd for sex
+74401|flipped height and weight
+74460|flipped height and weight
+74557|flipped bp
+74588|flipped bp
+74594|mismatched height for sex
+74854|flipped height and weight
+74865|flipped bp
+74962|wrong icd for sex
+74968|mismatched height for sex
+75504|flipped height and weight
+75618|flipped height and weight
+75985|flipped bp
+76023|flipped bp
+76271|flipped height and weight
+76299|flipped height and weight
+76572|flipped bp
+76611|mismatched height for sex
+76933|mismatched height for sex
+77114|flipped bp
+77349|flipped height and weight
+77353|flipped height and weight
+77403|flipped height and weight
+77447|flipped height and weight
+77473|flipped height and weight
+77505|flipped height and weight
+77611|flipped bp
+77749|flipped bp
+77753|flipped height and weight
+77868|flipped bp
+77870|wrong icd for sex
+77887|flipped height and weight
+77988|flipped height and weight
+78009|flipped height and weight
+78058|flipped height and weight
+78086|flipped height and weight
+78090|flipped height and weight
+78108|flipped height and weight
+78143|flipped height and weight
+78510|flipped height and weight
+78533|wrong icd for sex
+78543|wrong icd for sex
+78563|flipped bp
+78672|flipped height and weight
+78696|mismatched height for sex
+78856|flipped bp
+78862|flipped height and weight
+78928|flipped height and weight
+78956|wrong icd for sex
+79011|flipped bp
+79234|flipped height and weight
+79250|flipped height and weight
+79285|flipped height and weight
+79299|flipped height and weight
+79456|mismatched height for sex
+79565|flipped height and weight
+79614|flipped bp
+79816|flipped height and weight
+79859|mismatched height for sex
+79968|flipped height and weight
+80103|mismatched icd code and description
+80294|flipped height and weight
+80303|flipped bp
+80363|mismatched height for sex
+80510|flipped height and weight
+80640|flipped bp
+80695|flipped height and weight
+80846|wrong icd for sex
+81368|flipped height and weight
+81436|wrong icd for sex
+81487|flipped bp
+81609|mismatched height for sex
+81626|flipped height and weight
+81700|mismatched icd code and description
+81945|flipped bp
+82091|wrong icd for sex
+82198|flipped height and weight
+82261|flipped height and weight
+82270|flipped bp
+82337|mismatched height for sex
+82346|flipped height and weight
+82634|flipped height and weight
+82881|flipped height and weight
+82918|flipped height and weight
+82953|flipped height and weight
+83116|flipped height and weight
+83153|flipped height and weight
+83326|flipped height and weight
+83439|flipped height and weight
+83540|wrong icd for sex
+83541|flipped height and weight
+83581|flipped height and weight
+83598|flipped height and weight
+83622|flipped height and weight
+83691|flipped height and weight
+83692|flipped height and weight
+83789|flipped height and weight
+83982|flipped height and weight
+84012|flipped height and weight
+84036|flipped bp
+84119|flipped height and weight
+84351|flipped height and weight
+84370|mismatched height for sex
+84435|wrong icd for sex
+84525|flipped bp
+84591|wrong icd for sex
+84619|mismatched height for sex
+84649|flipped bp
+84717|mismatched height for sex
+84801|flipped height and weight
+84991|flipped height and weight
+84994|mismatched height for sex
+85267|flipped bp
+85300|flipped bp
+85324|flipped height and weight
+85332|flipped height and weight
+85361|flipped bp
+85389|flipped bp
+85555|flipped height and weight
+85779|flipped height and weight
+85793|mismatched height for sex
+85826|flipped height and weight
+85873|flipped height and weight
+86140|flipped height and weight
+86239|flipped bp
+86324|flipped height and weight
+86329|flipped bp
+86548|flipped height and weight
+86608|flipped height and weight
+87098|flipped bp
+87592|flipped height and weight
+87610|flipped height and weight
+87749|flipped height and weight
+87923|flipped height and weight
+88199|wrong icd for sex
+88229|flipped height and weight
+88236|flipped height and weight
+88301|flipped height and weight
+88772|flipped height and weight
+88845|wrong icd for sex
+88991|flipped height and weight
+89000|flipped bp
+89016|flipped bp
+89090|mismatched icd code and description
+89255|wrong icd for sex
+89417|flipped height and weight
+89567|flipped height and weight
+89597|flipped height and weight
+89706|wrong icd for sex
+89886|flipped height and weight
+90072|flipped bp
+90129|wrong icd for sex
+90245|flipped height and weight
+90259|wrong icd for sex
+90362|flipped height and weight
+90385|wrong icd for sex
+90498|flipped bp
+90594|mismatched height for sex
+90684|flipped bp
+90724|flipped bp
+90788|flipped height and weight
+90994|wrong icd for sex
+91269|flipped bp
+91369|flipped height and weight
+91447|flipped height and weight
+91449|flipped height and weight
+91513|flipped height and weight
+91685|flipped height and weight
+91842|flipped height and weight
+91957|flipped bp
+92056|flipped height and weight
+92108|flipped height and weight
+92288|flipped height and weight
+92300|flipped height and weight
+92320|mismatched height for sex
+92751|flipped height and weight
+92837|wrong icd for sex
+92988|flipped height and weight
+92992|flipped bp
+93037|flipped height and weight
+93314|flipped height and weight
+93559|flipped height and weight
+93563|flipped height and weight
+93608|flipped height and weight
+93687|flipped bp
+93881|flipped height and weight
+94145|flipped height and weight
+94203|flipped height and weight
+94215|mismatched icd code and description
+94270|wrong icd for sex
+94378|flipped height and weight
+94600|flipped height and weight
+94612|flipped height and weight
+94717|wrong icd for sex
+94885|flipped height and weight
+95054|flipped height and weight
+95057|flipped height and weight
+95067|flipped height and weight
+95091|flipped height and weight
+95383|flipped bp
+95953|flipped height and weight
+96188|flipped height and weight
+96262|flipped bp
+96404|flipped height and weight
+96410|flipped bp
+96481|wrong icd for sex
+96563|flipped height and weight
+96712|flipped height and weight
+96809|mismatched height for sex
+96878|flipped height and weight
+97149|flipped height and weight
+97485|flipped height and weight
+97586|flipped height and weight
+97880|flipped height and weight
+98050|flipped height and weight
+98165|flipped height and weight
+99059|flipped height and weight
+99226|flipped height and weight
+99258|flipped height and weight
+99317|flipped height and weight
+99441|flipped height and weight
+99503|flipped height and weight
+99654|flipped bp
+99852|flipped bp
+99864|flipped bp
